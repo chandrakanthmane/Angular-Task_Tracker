@@ -1,0 +1,5 @@
+<div [ngClass]="{remainder: task.remainder}" class="tasks" (click)="onToggle(task)">
+    <h3>{{task.text}} <fa-icon class="icon" [ngStyle]="{'color': 'red'}" [icon]="icon" (click)="delete(task);$event.stopPropagation()"></fa-icon></h3>
+    <p>{{task.time}} </p>
+    
+</div>

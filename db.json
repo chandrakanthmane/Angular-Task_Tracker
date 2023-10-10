@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Doctors Appointment",
+      "time": "6th october,2023 at 5:00 PM",
+      "remainder": true
+    },
+    {
+      "id": 2,
+      "text": "Movie",
+      "time": "10th october,2023 at 9:00 PM",
+      "remainder": true
+    },
+    {
+      "id": 3,
+      "text": "GYM",
+      "time": "8th october,2023 at 7:00 AM",
+      "remainder": true
+    },
+    {
+      "text": "Parent meeting",
+      "time": "10th october,2023 at 9:00 AM",
+      "remainder": false,
+      "id": 4
+    }
+  ]
+}
