@@ -1,4 +1,4 @@
-import { Component, DoCheck, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UIService} from '../../services/ui.service';
 
@@ -7,7 +7,7 @@ import { UIService} from '../../services/ui.service';
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddTaskComponent implements OnInit, OnDestroy, OnChanges,DoCheck{
+export class AddTaskComponent implements OnInit, OnDestroy{
   @Output() onAddTask = new EventEmitter();
   text!:string;
   day!: string;
@@ -20,14 +20,6 @@ export class AddTaskComponent implements OnInit, OnDestroy, OnChanges,DoCheck{
     this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
     //alert(this.showAddTask)
   }
-
-ngOnChanges(changes: SimpleChanges): void {
-  this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
-}
-
-ngDoCheck(): void {
-  this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
-}
 
   ngOnInit(): void {
     
